@@ -12,11 +12,11 @@ public class Segeregate0And1 {
 
     public static void main(String[] args) {
 
-        int[] arr = {0,0,0,0,0,0};
+        int[] arr = {0,0,1,0,1,0};
 
 
 
-        int l=0, r=arr.length-1;
+        /*int l=0, r=arr.length-1;
 
         while(l<r) {
 
@@ -31,6 +31,24 @@ public class Segeregate0And1 {
                 r--;
             }
         }
+*/
+
+            int l = 0,r = arr.length-1;
+
+            while( l < r ){
+                while(l<r && arr[l]==0) l++;
+                while(l<r && arr[r]==1) r--;
+
+
+                if(l < r){
+                    int temp = arr[l];
+                    arr[l] = arr[r];
+                    arr[r] = temp;
+                    l++;
+                    r--;
+                }
+
+            }
 
         for(int x : arr) {
             System.out.print(x + " ");

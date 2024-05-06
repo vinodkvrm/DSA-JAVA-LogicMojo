@@ -13,6 +13,23 @@ public class TwoRepeatedNumbers {
                 nums[absVal] = -nums[absVal];
         }
     }
+    public int[] twoRepeated(int arr[], int n)
+    {
+        // Your code here
+        int resultArray[] = new int[2];
+        int index = 0;
+        for(int i : arr){
+            int absIndex = Math.abs(i);
+            if(arr[absIndex] < 0){
+                resultArray[index++] = absIndex;
+            }else{
+                arr[absIndex] = -1 * arr[absIndex] ;
+            }
+        }
+
+        return resultArray;
+
+    }
 
 
 
