@@ -103,7 +103,7 @@ public class Operations {
     public static MainLL.Node reverseIterative(MainLL.Node head) {
         MainLL.Node curr = head;
         MainLL.Node prev = null, nxt = null;
-
+// 1  2-> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
         while(curr!=null) {
             nxt = curr.next;
             curr.next = prev;
@@ -117,6 +117,8 @@ public class Operations {
 
     public static void main(String[] args) {
         // 2->4->8
+
+       System.out.println(2/3  );
         
 
     }
